@@ -8,8 +8,8 @@ GIT_PAT=4ba0e405012561f86a47a2313289358bd97c4926
 
 az acr task create \
     --registry $ACR_NAME \
-    --name taskhelloworld \
-    --image helloworld:{{.Run.ID}} \
+    --name grpc-greeter-task \
+    --image grpc-greeter:{{.Run.ID}} \
     --context https://github.com/$GIT_USER/acr-build-helloworld-node.git \
     --file Dockerfile \
     --git-access-token $GIT_PAT
