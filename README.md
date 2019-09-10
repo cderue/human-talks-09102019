@@ -9,7 +9,8 @@
 az aks create \
     --resource-group human-talks-rg \
     --name human-talks-aks \
-    --node-count 1 \
+    --enable-rbac \
+    --node-vm-size Standard_DS3_v2 \
     --enable-addons monitoring \
     --generate-ssh-keys
     
